@@ -1,0 +1,27 @@
+ALGORITHM tri
+VAR
+    tab:=ARRAY_OF INTEGER[5]
+    i:=0 INTEGER
+    j:=0 INTEGER
+    e:=0 INTEGER
+    z:=0 INTEGER
+BEGIN
+    
+    write('fill the table ')
+    
+    FOR i FROM 0 TO 4 STEP 1  DO
+        tab[i]:=read(tab[i])
+    END_FOR
+
+    FOR j FROM 0 TO tab.length-2 STEP 1  DO
+        FOR e FROM 1 TO tab.length-1 STEP 1  DO
+            IF (tab[j]<tab[e]) THEN
+                z=tab[e]
+                tab[e]=tab[j]
+                tab[j]=z
+            END_IF
+        END_FOR
+    END_FOR
+
+
+END
